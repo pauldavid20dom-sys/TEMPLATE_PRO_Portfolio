@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Votre Nom] — Portfolio & Template</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#4f46e5',
+                            dark: '#6366f1',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-bold text-lg tracking-wider">&lt;Dev/&gt;</a>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">À propos</a>
+                <a href="#projects" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Projets</a>
+                <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <!-- Bouton Dark/Light Mode -->
+                <button id="theme-toggle" class="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 hover:scale-105 transition">
+                    🌙
+                </button>
+                <a href="#contact" class="hidden sm:inline-block px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition">
+                    Me contacter
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex items-center justify-center pt-16 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-indigo-600 dark:text-indigo-400 uppercase bg-indigo-50 dark:bg-indigo-950/50 rounded-full border border-indigo-200 dark:border-indigo-800">
+                Disponible pour de nouveaux projets
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+                Bonjour, je suis <span class="text-indigo-600 dark:text-indigo-400">[Votre Nom]</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-10">
+                Développeur web passionné, je conçois des interfaces modernes, performantes et centrées sur l'expérience utilisateur.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#projects" class="w-full sm:w-auto px-6 py-3 font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-lg shadow-indigo-600/20 transition">
+                    Voir mes projets
+                </a>
+                <a href="#contact" class="w-full sm:w-auto px-6 py-3 font-medium bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 rounded-xl transition">
+                    Me contacter
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 px-6 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">À propos de moi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <p>
+                        Je m'appelle [Votre Nom] et je construis des solutions logicielles et des sites web modernes. J'aime transformer des idées complexes en applications fluides et intuitives.
+                    </p>
+                    <p>
+                        Curieux et rigoureux, je veille toujours à maintenir un code propre, maintenable et optimisé pour la performance.
+                    </p>
+                </div>
+                <div class="bg-slate-100 dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <h3 class="font-semibold mb-4 text-sm uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Stack technique</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-xs font-medium bg-slate-200 dark:bg-slate-800 rounded-lg">HTML5 / CSS3</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-slate-200 dark:bg-slate-800 rounded-lg">JavaScript (ES6+)</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-slate-200 dark:bg-slate-800 rounded-lg">Tailwind CSS</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-slate-200 dark:bg-slate-800 rounded-lg">Git & GitHub</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-slate-200 dark:bg-slate-800 rounded-lg">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-24 px-6 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">Mes Projets Récents</h2>
+            <p class="text-slate-600 dark:text-slate-400 text-center max-w-xl mx-auto mb-16">
+                Voici une sélection de projets sur lesquels j'ai travaillé récemment.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Projet 1 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:-translate-y-1 transition duration-300">
+                    <div class="h-48 bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-400">
+                        [Image Projet 1]
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">SaaS Metrics Dashboard</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                            Une interface de tableau de bord moderne pour suivre les métriques clés d'une application.
+                        </p>
+                        <div class="flex gap-2 text-xs font-medium text-indigo-600 dark:text-indigo-400 mb-4">
+                            <span>#Tailwind</span>
+                            <span>#JS</span>
+                        </div>
+                        <a href="#" class="text-sm font-semibold hover:underline flex items-center gap-1">Voir le projet →</a>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:-translate-y-1 transition duration-300">
+                    <div class="h-48 bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-400">
+                        [Image Projet 2]
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">E-commerce Concept</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                            Refonte visuelle et ergonomique d'une boutique en ligne de produits artisanaux.
+                        </p>
+                        <div class="flex gap-2 text-xs font-medium text-indigo-600 dark:text-indigo-400 mb-4">
+                            <span>#HTML5</span>
+                            <span>#CSS Grid</span>
+                        </div>
+                        <a href="#" class="text-sm font-semibold hover:underline flex items-center gap-1">Voir le projet →</a>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:-translate-y-1 transition duration-300">
+                    <div class="h-48 bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-400">
+                        [Image Projet 3]
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">Task Management App</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                            Application web de gestion de tâches collaborative avec glisser-déposer.
+                        </p>
+                        <div class="flex gap-2 text-xs font-medium text-indigo-600 dark:text-indigo-400 mb-4">
+                            <span>#JavaScript</span>
+                            <span>#API</span>
+                        </div>
+                        <a href="#" class="text-sm font-semibold hover:underline flex items-center gap-1">Voir le projet →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 px-6 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Envie de collaborer ?</h2>
+            <p class="text-slate-600 dark:text-slate-400 mb-8">
+                Que ce soit pour un projet, une opportunité ou juste pour dire bonjour, mon inbox est ouverte.
+            </p>
+            <form class="space-y-4 text-left" onsubmit="event.preventDefault();">
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider mb-2">Votre Nom</label>
+                    <input type="text" placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider mb-2">Votre Email</label>
+                    <input type="email" placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider mb-2">Message</label>
+                    <textarea rows="4" placeholder="Votre message ici..." class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-600"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition shadow-lg shadow-indigo-600/20">
+                    Envoyer le message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 px-6 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500">
+        <p>&copy; 2026 [Votre Nom]. Tous droits réservés. Template conçu pour la vente.</p>
+    </footer>
+
+    <!-- SCRIPT POUR LE MODE SOMBRE -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // Vérifier les préférences initiales
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+            themeToggleBtn.textContent = '☀️';
+        } else {
+            htmlElement.classList.remove('dark');
+            themeToggleBtn.textContent = '🌙';
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.theme = 'light';
+                themeToggleBtn.textContent = '🌙';
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                themeToggleBtn.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>
